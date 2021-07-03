@@ -10,5 +10,6 @@ in pkgs.mkShell {
         pkgs.python39.pkgs.numpy
         pkgs.python39.pkgs.setuptools
         pkgs.python39.pkgs.pytest
+        pkgs.python39.pkgs.twine
     ];
 }
