@@ -3,13 +3,13 @@ import pybind11
 
 setup(
     name='wavelib',
-    version='1.0.0',
+    version='1.0.1',
     author='Tobias Bergkvist',
     author_email='tobias@bergkv.ist',
     description='Signal processing utilities for Python/Numpy written in C++',
     url='https://github.com/bergkvist/python-wavelib',
     license='MIT',
-    classsifiers=[
+    classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Developers',
