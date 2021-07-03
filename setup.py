@@ -1,9 +1,12 @@
-from setuptools import setup, Extension
-import pybind11
+from setuptools import setup
+try:
+    from pybind11.setup_helpers import Pybind11Extension
+except:
+    from setuptools import Extension as Pybind11Extension
 
 setup(
     name='wavelib',
-    version='1.0.2',
+    version='1.0.3',
     author='Tobias Bergkvist',
     author_email='tobias@bergkv.ist',
     description='Signal processing utilities for Python/Numpy written in C++',
@@ -22,12 +25,5 @@ setup(
     ],
     install_requires=['numpy', 'pybind11'],
     extras_require={'test': ['pytest']},
-    ext_modules=[
-        Extension(
-            'wavelib',
-            ['wavelib.cc'],
-            language='c++',
-            include_dirs=[pybind11.get_include()]
-        )
-    ],
+    ext_modules=[Pybind11Extension('wavelib', ['wavelib.cc'])],
 )
