@@ -3,7 +3,7 @@ import pybind11
 
 setup(
     name='wavelib',
-    version='1.0.1',
+    version='1.0.2',
     author='Tobias Bergkvist',
     author_email='tobias@bergkv.ist',
     description='Signal processing utilities for Python/Numpy written in C++',
@@ -20,7 +20,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: C++'
     ],
-    install_requires=['numpy'],
+    install_requires=['numpy', 'pybind11'],
     extras_require={'test': ['pytest']},
     ext_modules=[
         Extension(
